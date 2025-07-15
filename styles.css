@@ -1,0 +1,105 @@
+/* Reset everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: Playfair Display, serif;
+  background: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Your turn! Add styling for the h1 title */
+h1 {
+  /* Add your styles here */
+  font-family: Playfair Display, serif;
+  color: #333;
+  font-size: 2.7rem;
+  margin: 60;
+  margin-bottom: 30px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.calendar {
+  border: 2px solid #333;
+  border-radius: 15px; /* its suppoesed to be 10 JUST TRYING FOR SOFTER LOOK */
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+}
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #333;
+  color: white;
+  border-radius: 13px 13px 0 0; 
+}
+
+.day-name{
+  padding: 15px 15px; /* 15px on the top and bottom and 10px on the left and right */
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-body{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr)
+}
+
+.day{
+  padding: 15px 15px;
+  position: relative;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.special-day {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 1px #272727;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.big-heart {
+  font-size: 3.7rem;
+  transition: all 0.3s ease;
+  color: #821a1a; /* Red */
+  z-index: 1;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+
+
+}
+
+.big-heart:hover {
+  font-size: 4.1rem;
+  color: #ff69b4; /* Pink */
+  transform: translate(-50%, -50%) scale(1.1);
+}

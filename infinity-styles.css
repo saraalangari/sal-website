@@ -1,0 +1,41 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: white;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  z-index: 1;
+}
+
+.message h1 {
+  font-size: 3rem;
+  color: #cd6096;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 0;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+/* Floating emojis */
+.floating-emoji {
+  position: fixed;
+  font-size: 2.2rem;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-40px) scale(1.1) rotate(20deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+} 
